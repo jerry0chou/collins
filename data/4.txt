@@ -1,0 +1,62 @@
+A
+AIDS
+C
+Chancellor	Christian	Corp.
+D
+Dr
+M
+MP	MiddleEast	Miss	Muslim
+S
+Senate
+T
+TV	Tory
+U
+UN	UnitedNations
+a
+ability	above	absolutely	abuse	accepted	accuse	achieve	active	activity	addition	address	administration	admit	adopt	adult	advance	advantage	advice	affair affect	afternoon	agency	agent	agreement	ahead	aim	aircraft	airline	airport	album	alleged	allright	ally	alone	alternative	amount	analyst	animal	annual anyone	anyway	apparently	appeal	appearance	apply	approach	approve	aren’t	argue	argument	armed	arrest	arrive	article	artist	aspect	asset	association assume	attend	attention	attitude	attract	audience	aunt	author	average	avoid	award	aware
+b
+baby	bag	balance	ball	ban	band	bar	basic	basis	battle	beautiful	behaviour	below	benefit	beyond	bill	bird	blame	block	blood	board	boat	bomb	bond border	born	boss	bottle	bottom	box	brain	bridge	brief	bright	broad	budget	burn
+c
+cabinet	camera	camp	candidate	captain	caption	card	career	careful	cash	cast	catch	cell	certain	certainly	chair	chairman	challenge	champion championship	channel	chapter	character	cheap	check	chemical	choice	choose	church	circle	citizen	civil	classic	clean	clothes	coach	coast	cold	collapse colleague	collect	collection	college	comment	commercial	commission	commit	commitment	communist	compared	competition	complain	complex computer	conduct	confidence	confirm	conflict	congress	conservative	considerable	constant	consumer	contact	contain	contract	cook	cool	copy	corner correct	correspondent	county	couple	cousin	crash	cream	credit	crime	criminal	crisis	critic	critical	criticism	crowd	cry	culture	customer
+d
+daily	damage	dance	danger	dangerous	dark	data	date	dead	death	debate	debt	decade	declare	decline	deep	defeat	defence	defend	deficit	degree	delay deliver	democracy	democrat	democratic	deny	depend	deputy	desire	desk	despite	destroy	detail	determine	diet	difference	difficulty	dinner	direction discover	discuss	discussion	disease	display	dispute	distance	district	divide	division	doctor	document	dog	domestic	dominate	double	doubt	dozen dramatic	dream	dress	drink	driver	drop	dry	due	duty
+e
+earlier	earn	earth	eastern	eat	edge	edition	editor	education	effective	egg	eighteenth	eighth	eightieth	elect	element	eleventh	emerge	emergency employee	encourage	energy	engine	enjoy	ensure	enter	entire	entry	environment	environmental	equipment	escape	especially	essential	establish	estate estimate	evening	eventually	everybody	everyone	evidence	exact	examine	excellent	except	exchange	executive	exercise	exist	expensive	expert	explain export	express	extend	extra	extremely
+f
+facility	factor	factory	failure	fair	famous	fan	farm	farmer	fashion	fast	fat	favour	favourite	feature	federal	fee	feed	feeling	fellow	female	festival	field	fifteenth fifth	fiftieth	file	fill	finally	finance	finger	finish	fish	flat	flight	floor	flow	flower	focus	following	football	forget	formal	fortieth	forward	fourteenth	fourth freedom	frequent	fresh	fruit	fuel	fully	fun	function
+g
+gain	garden	gas	gather	gay	generally	generation	glass	goal	god	gold	gone	goods	governor	grand	grant	grey	growth	guarantee	guard	guess	guest	gun guy
+h
+hair	hand	handle	hang	happy	hardly	heart	heat	heavy	highly	hole	holiday	horse	hostage	hot	hotel	housing	huge	hundredth	hurt
+i
+ice	identify	ignore	image	imagine	immediately	impact	import	impose	impossible	improve	incident	included	income	increasingly	indeed	independence indicate	individual	industrial	inflation	influence	injury	inside	insist	instance	instead	institute	institution	insurance	intend	interested	interview	introduce investigate	investment	investor	invite	involve	involved	island	item
+j
+joint	journal	journalist	judge	jump	justice
+k
+key	kick	kid	king	kitchen	knowledge
+l
+lack	lady	language	largely	latest	launch	lawyer	leadership	leading	league	leg	legal	length	let’s	liberal	lift	limit	link	listen	loan	long-term	lord	loss	lunch
+m
+machine	magazine	mainly	maintain	majority	maker	male	manage	management	manager	mark	marriage	marry	mass	master	material	maybe	means meanwhile	measure	media	medical	memory	mention	message	method	mile	millionth	ministry	minority	mission	mistake	mix	model	modern	mortgage motor	mountain	mouth	movement	movie	murder	museum	myself
+n
+narrow	natural	nature	navy	nearly	necessary	negotiate	negotiation	neither	network	newspaper	nice	nineteenth	ninetieth	ninth	no one	nobody	none	nor normal	north-east	north-west	northern	note	notice	novel	nuclear
+o
+object	obvious	obviously	occasion	occupy	occur	odd	oh	okay	opinion	opportunity	opposition	option	orange	order	organization	organize	original otherwise	overall	owner
+p
+pack	package	pain	paint	painting	pair	park	parliament	particular	particularly	partner	patient	pattern	payment	per	perfect	perform	performance	period personal	phone	photograph	physical	pick	picture	piece	pink	plane	please	plus	politician	politics	poll	poor	popular	population	positive	possibility	possibly potential	powerful	practice	prefer	prepare	prepared	presence	present	presidential	pretty	prevent	previous	prince	princess	principle	print	prison	prisoner private	prize	producer	production	professional	professor	profit	program	progress	project	promise	promote	property	proposal	propose	prospect	protect protection	protest	prove	publish	pull	purchase	purple	purpose	push
+q
+quality	quarter	queen	quiet	quote
+r
+radical	rain	range	rapid	reaction	reader	ready	reality	realize	rebel	recall	recently	recession	recognize	recommend	reduce	refer	reflect	reform	refugee refuse	regard	region	regional	regular	reject	relation	relationship	relief	religious	remove	repeat	replace	reply	reporter	reporting	represent	representative republic	republican	request	require	reserve	resident	resolution	resource	respect	respond	response	responsibility	responsible	rest	restaurant	reveal	review rich	ride	risk	rival	river	rock	roll	route	royal	running
+s
+safe	safety	sanction	save	scale	scene	schedule	scheme	science	scientist	score	screen	sea	search	seat	secret	section	sector	secure	seed	senior	sentence separate	series	serve	session	set-up	settle	settlement	seventeenth	seventh	seventieth	severe	sex	sexual	shake	shall	shape	sharp	ship	shock	shoot	shop shot	shoulder	sight	significant	similar	simple	simply	sir	site	sixteenth	sixth	sixtieth	size	skill	skin	sleep	slightly	slip	slow	smile	smoke	soft	soldier	solution somebody	someone	sometimes	song	sorry	source	south-east	south-west	southern	space	specific	speech	speed	spirit	split	spokesman	sport	spot	spread spring	square	stable	stake	standard	statement	station	status	sterling	stick	stock	stone	store	straight	strange	strategy	strength	stress	strike	structure struggle	studio	stuff	style	subject	succeed	success	successful	suddenly	suffer	suit	summer	summit	supply	supporter	suppose	supposed	supreme	surface surprise	surround	survey	survive	suspect
+t
+table	tape	target	task	taste	tea	teach	teacher	tear	technique	technology	telephone	television	tend	tenth	terrible	territory	theatre	theory	therefore thinking	third	thirteenth	thirtieth	threat	threaten	throughout	throw	thus	ticket	tie	title	tomorrow	tonight	touch	tough	tour	track	traditional	train	transfer transport	travel	treat	treatment	treaty	tree	trial	trip	troop	trouble	trust	truth	twelfth	twentieth	type
+u
+uncle	unit	unless	unlikely	upon	urge	use	useful	usual	usually
+v
+variety	various	vehicle	version	victim	victory	video	village	violence	voice	volume	voter
+w
+warm	warn	waste	wave	weak	weapon	wear	weather	weekend	weight	welcome	western	whatever	while	whom	wild	will	willing	wind	window	wine	wing winner	wish	withdraw	wonder	wonderful	wood	worry	worth	wound	writer	writing	wrong
+y
+yard	yourself	youth
