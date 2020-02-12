@@ -38,7 +38,7 @@ def zipDir(dirpath, outFullName):
     zip.close()
 
 
-def initDataDict(kCount,keysLetter,length,total_detail_length,total_example_length):
+def initDataDict(kCount, keysLetter, length, total_detail_length, total_example_length):
     # uuid 需一致
     uu = uuid.uuid4()
     title = "柯林斯英汉双解"
@@ -58,8 +58,8 @@ def initDataDict(kCount,keysLetter,length,total_detail_length,total_example_leng
         'title.html': {
             'title': title,
             'length': length,
-            'total_detail_length':total_detail_length,
-            'total_example_length':total_example_length
+            'total_detail_length': total_detail_length,
+            'total_example_length': total_example_length
         },
     }
     return dataDict
@@ -68,7 +68,7 @@ def initDataDict(kCount,keysLetter,length,total_detail_length,total_example_leng
 def constructOneWordInfo(w, index, length):
     oneWordInfo = {}
     info = queryWordByName(w)
-    inf = (info[0], info[1],info[2] ,list(range(info[3])), f'{index}/{length}')
+    inf = (info[0], info[1], info[2], list(range(info[3])), f'{index}/{length}')
     oneWordInfo['word'] = inf
     word_id = info[0]
     detail = queryWordDetailByWordId(word_id)
@@ -110,7 +110,7 @@ def constructWordInfo(wordList):
 
     total_detail_length = 0
     total_example_length = 0
-    htmlDict={}
+    htmlDict = {}
     for k, words in alphabet.items():
         letterWords = []
         for index, w in enumerate(words):
@@ -126,14 +126,44 @@ def constructWordInfo(wordList):
             'allWordInfo': letterWords
         }
 
-    dataDict = initDataDict(kCount,alphabet.keys(),length,total_detail_length,total_example_length)
-    for k,v in htmlDict.items():
-        dataDict[k]=v
+    dataDict = initDataDict(kCount, alphabet.keys(), length, total_detail_length, total_example_length)
+    for k, v in htmlDict.items():
+        dataDict[k] = v
 
     return dataDict
 
 
-wordList = queryWordByLevel(0)
+def removeFile():
+    letters = list(string.ascii_uppercase)
+    for letter in letters:
+        filename = f'epub/OEBPS/{letter}.html'
+        if os.path.exists(filename):
+            os.remove(filename)
+
+
+
+
+def genWordByLevel():
+    dic = {
+        0: '零',
+        1: '一',
+        2: '二',
+        3: '三',
+        4: '四',
+        5: '五'
+    }
+    for level in reversed(range(6)):
+        wordList = queryWordByLevel(level)
+        dataDict = constructWordInfo(wordList)
+        setTemplateValues(dataDict)
+        zipDir('epub', f'柯林斯英汉双解{dic[level]}星词汇.epub')
+        removeFile()
+
+
+genWordByLevel()
+
+wordList = queryAllWord()
 dataDict = constructWordInfo(wordList)
 setTemplateValues(dataDict)
-zipDir('epub', '柯林斯英汉双解零星词汇.epub')
+zipDir('epub', '柯林斯英汉双解.epub')
+removeFile()

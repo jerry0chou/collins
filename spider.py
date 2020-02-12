@@ -88,6 +88,6 @@ def getSpeak(wordList):
 # getWordInfoFromWeb(0, wordList)
 
 # 爬取音标（之前忘记爬了）
-wordList = querySpeakIsNullWord()
-getSpeak(wordList)
+# wordList = querySpeakIsNullWord()
+# getSpeak(wordList)
 # print(wordList)

@@ -3,7 +3,7 @@
                  "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd">
 <ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
   <head>
-    <meta name="dtb:uid" content="urn:uuid:fefbfa2d-431f-4de2-858e-294f1b95cbf6"/>
+    <meta name="dtb:uid" content="urn:uuid:2f0ff5a9-a6b7-4ee8-b5a5-6b400be809bc"/>
     <meta name="dtb:depth" content="1"/>
     <meta name="dtb:totalPageCount" content="0"/>
     <meta name="dtb:maxPageNumber" content="0"/>
@@ -21,182 +21,182 @@
     
     <navPoint id="navpoint-2" playOrder="2">
       <navLabel>
-        <text>A-(998)</text>
+        <text>A-(1777)</text>
       </navLabel>
       <content src="A.html"/>
     </navPoint>
     
     <navPoint id="navpoint-3" playOrder="3">
       <navLabel>
-        <text>B-(1433)</text>
+        <text>B-(2110)</text>
       </navLabel>
       <content src="B.html"/>
     </navPoint>
     
     <navPoint id="navpoint-4" playOrder="4">
       <navLabel>
-        <text>C-(2053)</text>
+        <text>C-(3271)</text>
       </navLabel>
       <content src="C.html"/>
     </navPoint>
     
     <navPoint id="navpoint-5" playOrder="5">
       <navLabel>
-        <text>D-(1184)</text>
+        <text>D-(1949)</text>
       </navLabel>
       <content src="D.html"/>
     </navPoint>
     
     <navPoint id="navpoint-6" playOrder="6">
       <navLabel>
-        <text>E-(666)</text>
+        <text>E-(1186)</text>
       </navLabel>
       <content src="E.html"/>
     </navPoint>
     
     <navPoint id="navpoint-7" playOrder="7">
       <navLabel>
-        <text>F-(894)</text>
+        <text>F-(1485)</text>
       </navLabel>
       <content src="F.html"/>
     </navPoint>
     
     <navPoint id="navpoint-8" playOrder="8">
       <navLabel>
-        <text>G-(796)</text>
+        <text>G-(1167)</text>
       </navLabel>
       <content src="G.html"/>
     </navPoint>
     
     <navPoint id="navpoint-9" playOrder="9">
       <navLabel>
-        <text>H-(829)</text>
+        <text>H-(1298)</text>
       </navLabel>
       <content src="H.html"/>
     </navPoint>
     
     <navPoint id="navpoint-10" playOrder="10">
       <navLabel>
-        <text>I-(668)</text>
+        <text>I-(1211)</text>
       </navLabel>
       <content src="I.html"/>
     </navPoint>
     
     <navPoint id="navpoint-11" playOrder="11">
       <navLabel>
-        <text>J-(173)</text>
+        <text>J-(267)</text>
       </navLabel>
       <content src="J.html"/>
     </navPoint>
     
     <navPoint id="navpoint-12" playOrder="12">
       <navLabel>
-        <text>K-(176)</text>
+        <text>K-(247)</text>
       </navLabel>
       <content src="K.html"/>
     </navPoint>
     
     <navPoint id="navpoint-13" playOrder="13">
       <navLabel>
-        <text>L-(673)</text>
+        <text>L-(1107)</text>
       </navLabel>
       <content src="L.html"/>
     </navPoint>
     
     <navPoint id="navpoint-14" playOrder="14">
       <navLabel>
-        <text>M-(998)</text>
+        <text>M-(1618)</text>
       </navLabel>
       <content src="M.html"/>
     </navPoint>
     
     <navPoint id="navpoint-15" playOrder="15">
       <navLabel>
-        <text>N-(415)</text>
+        <text>N-(653)</text>
       </navLabel>
       <content src="N.html"/>
     </navPoint>
     
     <navPoint id="navpoint-16" playOrder="16">
       <navLabel>
-        <text>O-(485)</text>
+        <text>O-(814)</text>
       </navLabel>
       <content src="O.html"/>
     </navPoint>
     
     <navPoint id="navpoint-17" playOrder="17">
       <navLabel>
-        <text>P-(1805)</text>
+        <text>P-(2822)</text>
       </navLabel>
       <content src="P.html"/>
     </navPoint>
     
     <navPoint id="navpoint-18" playOrder="18">
       <navLabel>
-        <text>Q-(78)</text>
+        <text>Q-(135)</text>
       </navLabel>
       <content src="Q.html"/>
     </navPoint>
     
     <navPoint id="navpoint-19" playOrder="19">
       <navLabel>
-        <text>R-(1020)</text>
+        <text>R-(1768)</text>
       </navLabel>
       <content src="R.html"/>
     </navPoint>
     
     <navPoint id="navpoint-20" playOrder="20">
       <navLabel>
-        <text>S-(2699)</text>
+        <text>S-(4134)</text>
       </navLabel>
       <content src="S.html"/>
     </navPoint>
     
     <navPoint id="navpoint-21" playOrder="21">
       <navLabel>
-        <text>T-(1124)</text>
+        <text>T-(1742)</text>
       </navLabel>
       <content src="T.html"/>
     </navPoint>
     
     <navPoint id="navpoint-22" playOrder="22">
       <navLabel>
-        <text>U-(542)</text>
+        <text>U-(845)</text>
       </navLabel>
       <content src="U.html"/>
     </navPoint>
     
     <navPoint id="navpoint-23" playOrder="23">
       <navLabel>
-        <text>V-(221)</text>
+        <text>V-(419)</text>
       </navLabel>
       <content src="V.html"/>
     </navPoint>
     
     <navPoint id="navpoint-24" playOrder="24">
       <navLabel>
-        <text>W-(688)</text>
+        <text>W-(1025)</text>
       </navLabel>
       <content src="W.html"/>
     </navPoint>
     
     <navPoint id="navpoint-25" playOrder="25">
       <navLabel>
-        <text>X-(5)</text>
+        <text>X-(7)</text>
       </navLabel>
       <content src="X.html"/>
     </navPoint>
     
     <navPoint id="navpoint-26" playOrder="26">
       <navLabel>
-        <text>Y-(65)</text>
+        <text>Y-(99)</text>
       </navLabel>
       <content src="Y.html"/>
     </navPoint>
     
     <navPoint id="navpoint-27" playOrder="27">
       <navLabel>
-        <text>Z-(34)</text>
+        <text>Z-(50)</text>
       </navLabel>
       <content src="Z.html"/>
     </navPoint>
