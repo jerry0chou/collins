@@ -14,15 +14,17 @@
   <navMap>
     <navPoint id="navpoint-1" playOrder="1">
       <navLabel>
-        <text>Book cover</text>
+        <text>{{title}}封面</text>
       </navLabel>
       <content src="title.html"/>
     </navPoint>
-    <navPoint id="navpoint-2" playOrder="2">
+    {% for k,count in kCount.items() %}
+    <navPoint id="navpoint-{{loop.index+1}}" playOrder="{{loop.index+1}}">
       <navLabel>
-        <text>Contents</text>
+        <text>{{k}}-({{count}})</text>
       </navLabel>
-      <content src="content.html"/>
+      <content src="{{k}}.html"/>
     </navPoint>
+    {% endfor %}
   </navMap>
 </ncx>

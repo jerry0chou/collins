@@ -6,10 +6,16 @@ conn = sqlite3.connect('collins.db')
 
 def autoOpenClose(func):
     def wrapper(*args, **kwargs):
+        global conn
+        try:
+            conn.cursor()
+        except:
+            conn = sqlite3.connect('collins.db')
         res = func(*args, **kwargs)
         conn.commit()
         conn.close()
         return res
+
     return wrapper
 
 
@@ -26,6 +32,9 @@ def rep(string: str):
     string = string.replace("'", '"')
     return string
 
+def rep2(string: str):
+    string = string.replace('"', "'")
+    return string
 
 @autoOpenClose
 def insertWordInfo(word, wordDict):
@@ -65,6 +74,10 @@ def setWordLevel(word, level):
     c = conn.cursor()
     c.execute(f"""update word set level={level} where name='{rep(word)}'""")
 
+@autoOpenClose
+def setWordSpeak(word, speak):
+    c = conn.cursor()
+    c.execute(f'''update word set speak="{rep2(speak)}" where name="{word}" ''')
 
 @autoOpenClose
 def setDefaultWordLevel():
@@ -81,6 +94,14 @@ def queryAllWord():
         wordList.append(r[0])
     return wordList
 
+@autoOpenClose
+def querySpeakIsNullWord():
+    c = conn.cursor()
+    res = c.execute('select name from word where speak="" or speak is null')
+    wordList = []
+    for r in res:
+        wordList.append(r[0])
+    return wordList
 
 @autoOpenClose
 def handleError():
@@ -98,6 +119,39 @@ def handleError():
 def getUncapturedWord():
     c = conn.cursor()
     res = c.execute('SELECT  name from word where id not in (SELECT word_id from detail)')
+    wordList = []
+    for r in res:
+        wordList.append(r[0])
+    return wordList
+
+
+@autoOpenClose
+def queryWordByName(name):
+    c = conn.cursor()
+    res = c.execute(f"SELECT id,name,speak,level from word where name='{name}'")
+    word = [r for r in res][0]
+    return word
+
+
+@autoOpenClose
+def queryWordDetailByWordId(wid):
+    c = conn.cursor()
+    res = c.execute(f"SELECT id, feature,chinese,english from detail WHERE word_id={wid}")
+    detail = [r for r in res]
+    return detail
+
+
+@autoOpenClose
+def queryWordExampleByDetailId(detail_id):
+    c = conn.cursor()
+    res = c.execute(f"SELECT en,cn from example where detail_id={detail_id}")
+    examples = [r for r in res]
+    return examples
+
+@autoOpenClose
+def queryWordByLevel(level):
+    c = conn.cursor()
+    res = c.execute(f'select name from word where level={level} ')
     wordList = []
     for r in res:
         wordList.append(r[0])

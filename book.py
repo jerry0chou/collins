@@ -1,7 +1,7 @@
-from jinja2 import Template
-import uuid, os, zipfile
+import uuid, os, zipfile, string, re
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
+from db import queryAllWord, queryWordByName, queryWordDetailByWordId, queryWordExampleByDetailId, queryWordByLevel
 
 env = Environment(
     loader=FileSystemLoader('./templates'),
@@ -11,10 +11,14 @@ env = Environment(
 
 def setTemplateValues(dataDict):
     for filename, dictValues in dataDict.items():
-        template = env.get_template(filename)
-        string = template.render(**dictValues)
-        with open(f'epub/OEBPS/{filename}', 'w') as f:
-            f.write(string)
+        template = None
+        try:
+            template = env.get_template(filename)
+        except:
+            template = env.get_template('content.html')
+        content = template.render(**dictValues)
+        with open(f'epub/OEBPS/{filename}', 'w', encoding='utf8') as f:
+            f.write(content)
 
 
 def zipDir(dirpath, outFullName):
@@ -29,27 +33,107 @@ def zipDir(dirpath, outFullName):
         # 去掉目标跟路径，只对目标文件夹下边的文件及文件夹进行压缩
         fpath = path.replace(dirpath, '')
         for filename in filenames:
-            print(os.path.join(path, filename), os.path.join(fpath, filename))
+            # print(os.path.join(path, filename), os.path.join(fpath, filename))
             zip.write(os.path.join(path, filename), os.path.join(fpath, filename))
     zip.close()
 
 
-# uuid 需一致
-uu = uuid.uuid4()
-dataDict = {
-    'content.opf': {
-        'title': "Collins",
-        'creator': 'JerryChou',
-        'uuid': uu
-    },
-    'toc.ncx': {
-        'uuid': uu,
-        'title': "Collins"
-    },
-    'title.html': {
-        'title': "Collins"
+def initDataDict(kCount,keysLetter,length,total_detail_length,total_example_length):
+    # uuid 需一致
+    uu = uuid.uuid4()
+    title = "柯林斯英汉双解"
+    dataDict = {
+        'content.opf': {
+            'title': title,
+            'creator': 'JerryChou',
+            'uuid': uu,
+            'letters': keysLetter
+        },
+        'toc.ncx': {
+            'uuid': uu,
+            'title': title,
+            # 'letters':list(string.ascii_uppercase),
+            'kCount': kCount
+        },
+        'title.html': {
+            'title': title,
+            'length': length,
+            'total_detail_length':total_detail_length,
+            'total_example_length':total_example_length
+        },
     }
-}
+    return dataDict
 
+
+def constructOneWordInfo(w, index, length):
+    oneWordInfo = {}
+    info = queryWordByName(w)
+    inf = (info[0], info[1],info[2] ,list(range(info[3])), f'{index}/{length}')
+    oneWordInfo['word'] = inf
+    word_id = info[0]
+    detail = queryWordDetailByWordId(word_id)
+    oneWordInfo['detail_example'] = []
+    detail_length = len(detail)
+    example_length = 0
+    for d in detail:
+        detail_id = d[0]
+        detail_example = {}
+        detail_example['detail'] = d
+        examples = queryWordExampleByDetailId(detail_id)
+        detail_example['example'] = examples
+        oneWordInfo['detail_example'].append(detail_example)
+        example_length += len(examples)
+
+    return oneWordInfo, detail_length, example_length
+
+
+def constructWordInfo(wordList):
+    letters = list(string.ascii_uppercase)
+    alphabet = {}
+    length = 0
+    for word in wordList:
+        if re.match('[a-zA-Z]', word[0]):
+            index = letters.index(word.upper()[0])
+            l = letters[index]
+            if l in alphabet.keys():
+                alphabet[l].append(word)
+            else:
+                alphabet[l] = [word]
+
+            length += 1
+
+    kCount = {}
+    for k, v in alphabet.items():
+        kCount[k] = len(v)
+
+    count = 0
+
+    total_detail_length = 0
+    total_example_length = 0
+    htmlDict={}
+    for k, words in alphabet.items():
+        letterWords = []
+        for index, w in enumerate(words):
+            oneWordInfo, detail_length, example_length = constructOneWordInfo(w, index + 1, len(words))
+            total_detail_length += detail_length
+            total_example_length += example_length
+            letterWords.append(oneWordInfo)
+            count += 1
+            print(f'\rcount:{count},completed:{round(count / length, 4) * 100}%,leave {length - count} to compute',
+                  end="")
+        htmlDict[f'{k}.html'] = {
+            'title': f'{k}-({kCount[k]})',
+            'allWordInfo': letterWords
+        }
+
+    dataDict = initDataDict(kCount,alphabet.keys(),length,total_detail_length,total_example_length)
+    for k,v in htmlDict.items():
+        dataDict[k]=v
+
+    return dataDict
+
+
+wordList = queryWordByLevel(0)
+dataDict = constructWordInfo(wordList)
 setTemplateValues(dataDict)
-zipDir('epub','test.epub')
+zipDir('epub', '柯林斯英汉双解零星词汇.epub')

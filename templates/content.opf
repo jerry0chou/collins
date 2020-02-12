@@ -11,13 +11,19 @@
   <manifest>
     <item id="ncx" href="toc.ncx" media-type="text/xml"/>
     <item id="cover" href="title.html" media-type="application/xhtml+xml"/>
-    <item id="content" href="content.html" media-type="application/xhtml+xml"/>
+
+     {% for letter in letters%}
+    <item id="{{letter}}" href="{{letter}}.html" media-type="application/xhtml+xml"/>
+    {% endfor %}
+
     <item id="cover-image" href="images/cover.png" media-type="image/png"/>
     <item id="css" href="stylesheet.css" media-type="text/css"/>
   </manifest>
   <spine toc="ncx">
     <itemref idref="cover" linear="no"/>
-    <itemref idref="content"/>
+    {% for letter in letters%}
+          <itemref idref="{{letter}}"/>
+    {% endfor %}
   </spine>
   <guide>
     <reference href="cover.html" type="cover" title="Cover"/>

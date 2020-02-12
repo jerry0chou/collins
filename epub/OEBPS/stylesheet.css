@@ -1,7 +1,4 @@
-body {
-  font-family: sans-serif;
-}
-h1,h2,h3,h4 {
-  font-family: serif;
-  color: red;
+.center {
+    width: 500px;
+    margin: auto;
 }

@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{{title}}</title>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+</head>
+<body>
+<h2>{{title}}</h2>
+<div></div>
+{% for oneWord in allWordInfo %}
+<strong>{{oneWord.word[1]}}</strong>
+<span>{{oneWord.word[2]}}</span>
+{% for star in oneWord.word[3]%}
+<span>★</span>
+{% endfor %}
+<span>({{oneWord.word[4]}})</span>
+<ol>
+    {% for detail_example in oneWord.detail_example %}
+    <li>
+        <strong>{{detail_example.detail[1]}}</strong>
+        <span>{{detail_example.detail[2]}}</span>
+        <div>{{detail_example.detail[3]}}</div>
+    </li>
+    {% for example in detail_example.example %}
+    <div>●{{example[0]}}</div>
+    <div>○{{example[1]}}</div>
+    {% endfor %}
+    {% endfor %}
+</ol>
+{% endfor %}
+</body>
+</html>

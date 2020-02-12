@@ -1,6 +1,6 @@
 import requests
 from pyquery import PyQuery as pq
-from db import insertWordInfo, queryAllWord, handleError, getUncapturedWord
+from db import insertWordInfo, queryAllWord, handleError, getUncapturedWord, setWordSpeak, querySpeakIsNullWord
 
 
 def getWord(content):
@@ -52,8 +52,26 @@ def getWordInfoFromWeb(index, wordList):
         if not d:
             errorCount += 1
         print(
-            f'\rerrorCount={errorCount},insertCount={count-errorCount}, count={count}, completed={round(count / length, 4) * 100}%, leave {length - count} to insert',
+            f'\rerrorCount={errorCount},insertCount={count - errorCount}, count={count}, completed={round(count / length, 4) * 100}%, leave {length - count} to insert',
             end="")
+
+
+def getSpeak(wordList):
+    errorCount = 0
+    length = len(wordList)
+    count = 0
+    for index, word in enumerate(wordList):
+        content = setRequest(word)
+
+        speak = pq(content)('.base-speak').text()
+        if speak == '':
+            errorCount += 1
+        count += 1
+        setWordSpeak(word, speak)
+        print(
+            f'\rerrorCount={errorCount},setCount={count - errorCount}, count={count}, completed={round(count / length, 4) * 100}%, leave {length - count} to set',
+            end="")
+
 
 
 # 出现错误重新爬取
@@ -68,3 +86,8 @@ def getWordInfoFromWeb(index, wordList):
 
 # wordList = getUncapturedWord()
 # getWordInfoFromWeb(0, wordList)
+
+# 爬取音标（之前忘记爬了）
+wordList = querySpeakIsNullWord()
+getSpeak(wordList)
+# print(wordList)

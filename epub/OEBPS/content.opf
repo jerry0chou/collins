@@ -3,21 +3,127 @@
             xmlns:dc="http://purl.org/dc/elements/1.1/"
             unique-identifier="bookid" version="2.0">
   <metadata>
-    <dc:title>Collins</dc:title>
+    <dc:title>柯林斯英汉双解</dc:title>
     <dc:creator>JerryChou</dc:creator>
-    <dc:identifier id="bookid">urn:uuid:f7523539-be2d-40a2-ad3f-e45d5e33b650</dc:identifier>
+    <dc:identifier id="bookid">urn:uuid:fefbfa2d-431f-4de2-858e-294f1b95cbf6</dc:identifier>
     <meta name="cover" content="cover-image" />
   </metadata>
   <manifest>
     <item id="ncx" href="toc.ncx" media-type="text/xml"/>
     <item id="cover" href="title.html" media-type="application/xhtml+xml"/>
-    <item id="content" href="content.html" media-type="application/xhtml+xml"/>
+
+     
+    <item id="A" href="A.html" media-type="application/xhtml+xml"/>
+    
+    <item id="B" href="B.html" media-type="application/xhtml+xml"/>
+    
+    <item id="C" href="C.html" media-type="application/xhtml+xml"/>
+    
+    <item id="D" href="D.html" media-type="application/xhtml+xml"/>
+    
+    <item id="E" href="E.html" media-type="application/xhtml+xml"/>
+    
+    <item id="F" href="F.html" media-type="application/xhtml+xml"/>
+    
+    <item id="G" href="G.html" media-type="application/xhtml+xml"/>
+    
+    <item id="H" href="H.html" media-type="application/xhtml+xml"/>
+    
+    <item id="I" href="I.html" media-type="application/xhtml+xml"/>
+    
+    <item id="J" href="J.html" media-type="application/xhtml+xml"/>
+    
+    <item id="K" href="K.html" media-type="application/xhtml+xml"/>
+    
+    <item id="L" href="L.html" media-type="application/xhtml+xml"/>
+    
+    <item id="M" href="M.html" media-type="application/xhtml+xml"/>
+    
+    <item id="N" href="N.html" media-type="application/xhtml+xml"/>
+    
+    <item id="O" href="O.html" media-type="application/xhtml+xml"/>
+    
+    <item id="P" href="P.html" media-type="application/xhtml+xml"/>
+    
+    <item id="Q" href="Q.html" media-type="application/xhtml+xml"/>
+    
+    <item id="R" href="R.html" media-type="application/xhtml+xml"/>
+    
+    <item id="S" href="S.html" media-type="application/xhtml+xml"/>
+    
+    <item id="T" href="T.html" media-type="application/xhtml+xml"/>
+    
+    <item id="U" href="U.html" media-type="application/xhtml+xml"/>
+    
+    <item id="V" href="V.html" media-type="application/xhtml+xml"/>
+    
+    <item id="W" href="W.html" media-type="application/xhtml+xml"/>
+    
+    <item id="X" href="X.html" media-type="application/xhtml+xml"/>
+    
+    <item id="Y" href="Y.html" media-type="application/xhtml+xml"/>
+    
+    <item id="Z" href="Z.html" media-type="application/xhtml+xml"/>
+    
+
     <item id="cover-image" href="images/cover.png" media-type="image/png"/>
     <item id="css" href="stylesheet.css" media-type="text/css"/>
   </manifest>
   <spine toc="ncx">
     <itemref idref="cover" linear="no"/>
-    <itemref idref="content"/>
+    
+          <itemref idref="A"/>
+    
+          <itemref idref="B"/>
+    
+          <itemref idref="C"/>
+    
+          <itemref idref="D"/>
+    
+          <itemref idref="E"/>
+    
+          <itemref idref="F"/>
+    
+          <itemref idref="G"/>
+    
+          <itemref idref="H"/>
+    
+          <itemref idref="I"/>
+    
+          <itemref idref="J"/>
+    
+          <itemref idref="K"/>
+    
+          <itemref idref="L"/>
+    
+          <itemref idref="M"/>
+    
+          <itemref idref="N"/>
+    
+          <itemref idref="O"/>
+    
+          <itemref idref="P"/>
+    
+          <itemref idref="Q"/>
+    
+          <itemref idref="R"/>
+    
+          <itemref idref="S"/>
+    
+          <itemref idref="T"/>
+    
+          <itemref idref="U"/>
+    
+          <itemref idref="V"/>
+    
+          <itemref idref="W"/>
+    
+          <itemref idref="X"/>
+    
+          <itemref idref="Y"/>
+    
+          <itemref idref="Z"/>
+    
   </spine>
   <guide>
     <reference href="cover.html" type="cover" title="Cover"/>
