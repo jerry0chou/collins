@@ -1,6 +1,7 @@
 import requests
 from pyquery import PyQuery as pq
-from db import insertWordInfo, queryAllWord, handleError, getUncapturedWord, setWordSpeak, querySpeakIsNullWord
+from db import insertWordInfo, queryAllWord, handleError, getUncapturedWord, setWordSpeak, querySpeakIsNullWord, \
+    queryWrongSpeakWord
 
 
 def getWord(content):
@@ -73,6 +74,10 @@ def getSpeak(wordList):
             end="")
 
 
+wordList = queryWrongSpeakWord()
+print(wordList)
+print(len(wordList))
+# getSpeak(wordList)
 
 # 出现错误重新爬取
 # word = handleError()

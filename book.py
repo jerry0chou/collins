@@ -156,7 +156,7 @@ def genWordByLevel():
         wordList = queryWordByLevel(level)
         dataDict = constructWordInfo(wordList)
         setTemplateValues(dataDict)
-        zipDir('epub', f'柯林斯英汉双解{dic[level]}星词汇.epub')
+        zipDir('epub', f'{dic[level]}星词汇.epub')
         removeFile()
 
 

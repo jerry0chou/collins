@@ -80,6 +80,11 @@ def setWordSpeak(word, speak):
     c.execute(f'''update word set speak="{rep2(speak)}" where name="{word}" ''')
 
 @autoOpenClose
+def setWordSpeak2(wordId, speak):
+    c = conn.cursor()
+    c.execute(f'''update word set speak="{rep2(speak)}" where id={wordId} ''')
+
+@autoOpenClose
 def setDefaultWordLevel():
     c = conn.cursor()
     c.execute(f'update word set level=0 where level is null ')
@@ -156,3 +161,12 @@ def queryWordByLevel(level):
     for r in res:
         wordList.append(r[0])
     return wordList
+
+@autoOpenClose
+def queryWrongSpeakWord():
+    c = conn.cursor()
+    res = c.execute(f"""SELECT id,name from word where speak = '' """)
+    wordInfoList = []
+    for r in res:
+        wordInfoList.append((r[0],r[1]))
+    return wordInfoList
