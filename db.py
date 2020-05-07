@@ -100,6 +100,24 @@ def queryAllWord():
     return wordList
 
 @autoOpenClose
+def queryZeroLevelWordWithoutPhrase():
+    c = conn.cursor()
+    res = c.execute("SELECT name from word where  name not LIKE '%-%' and name not like '% %' and level=0")
+    wordList = []
+    for r in res:
+        wordList.append(r[0])
+    return wordList
+
+@autoOpenClose
+def queryZeroLevelWordWithPhrase():
+    c = conn.cursor()
+    res = c.execute("SELECT name from word where  (name  LIKE '%-%' or name  like '% %' ) and level=0")
+    wordList = []
+    for r in res:
+        wordList.append(r[0])
+    return wordList
+
+@autoOpenClose
 def querySpeakIsNullWord():
     c = conn.cursor()
     res = c.execute('select name from word where speak="" or speak is null')

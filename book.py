@@ -1,8 +1,7 @@
-import uuid, os, zipfile, string, re
+import uuid, os, zipfile, string, re,tarfile
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
-from db import queryAllWord, queryWordByName, queryWordDetailByWordId, queryWordExampleByDetailId, queryWordByLevel
-
+from db import *
 env = Environment(
     loader=FileSystemLoader('./templates'),
     autoescape=select_autoescape(['html', 'xml', 'opf', 'opf'])
@@ -160,10 +159,22 @@ def genWordByLevel():
         removeFile()
 
 
-genWordByLevel()
+# genWordByLevel()
+#
+# wordList = queryAllWord()
+# dataDict = constructWordInfo(wordList)
+# setTemplateValues(dataDict)
+# zipDir('epub', '柯林斯英汉双解.epub')
+# removeFile()
 
-wordList = queryAllWord()
+wordList=queryZeroLevelWordWithoutPhrase()
 dataDict = constructWordInfo(wordList)
 setTemplateValues(dataDict)
-zipDir('epub', '柯林斯英汉双解.epub')
+zipDir('epub', '零星无短语词汇.epub')
+removeFile()
+
+wordList=queryZeroLevelWordWithPhrase()
+dataDict = constructWordInfo(wordList)
+setTemplateValues(dataDict)
+zipDir('epub', '零星短语词汇.epub')
 removeFile()
